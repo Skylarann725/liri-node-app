@@ -101,19 +101,19 @@ var doThis = function() {
 var switchOperation = function(operation, names) {
     switch (operation) { // switch statement to decide which operation
         case 'my-tweets':
-            console.log();
+            console.log('\n Fetching Tweets \n');
             tweets();
             break;
         case 'spotify-this-song':
-            console.log();
+            console.log('\n Fetching Song Info \n');
             spotify(names);
             break;
         case 'movie-this':
-            console.log();
+            console.log("\n Fetching Movie Info \n");
             movie(names);
             break;
         case 'do-what-it-says':
-            console.log();
+            console.log('\n Fetching Info \n');
             doThis();
             break;
     }
