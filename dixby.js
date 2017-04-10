@@ -19,15 +19,16 @@ function tweets() {
         } else {
             for (var i = 0; i < tweets.length; i++) {
                 console.log(JSON.stringify(tweets[i].text));
+                console.log("----------------------------")
             }
         }
     });
 }
 
 //function for getting the artists name from array
-    var getArtistNames = function(artist) {
-        return artist.name;
-    };
+var getArtistNames = function(artist) {
+    return artist.name;
+};
 
 var spotify = function(names) {
 
@@ -47,12 +48,11 @@ var spotify = function(names) {
             songinfo = data.tracks.items;
 
             for (var i = 0; i < 3; i++) {
-                console.log(songinfo[i].album.artists[i]);
-                console.log("---------------------")
+                for (var j = 0; j < songinfo[i].artists.length; j++) {
+                    console.log(songinfo[i].artists[j].name);
+                }
                 console.log(songinfo[i].name);
-                console.log("---------------------")
                 console.log(songinfo[i].preview_url);
-                console.log("---------------------")
                 console.log(songinfo[i].album.name);
                 console.log("---------------------")
             }
